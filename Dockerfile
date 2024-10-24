@@ -54,4 +54,6 @@ COPY docker/database.yml $HELPY_HOME/config/database.yml
 
 EXPOSE 3000
 
-CMD ["cron", "&&", "/bin/bash", "/helpy/docker/run.sh"]
+USER root
+
+CMD ["cron", "&&", "su", "$HELPY_USER", "/bin/bash", "/helpy/docker/run.sh"]
