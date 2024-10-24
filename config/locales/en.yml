@@ -285,8 +285,8 @@ en:
   send_invite: "Send Invite"
 
   # Discussion View
-  asked_a_question: "%{user_name} wrote..."
-  replied: "%{user_name} replied..."
+  asked_a_question: "%{user_name} a écrit :"
+  replied: "%{user_name} a répondu :"
   posted_note: "%{user_name} posted an internal note..."
   type_reply: Type your reply, or select from a common message below
   select_common: Select Common Reply
