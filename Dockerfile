@@ -8,7 +8,7 @@ ENV RAILS_ENV=production \
 
 RUN apt-get update \
   && apt-get upgrade -y \
-  && apt-get install -y nodejs postgresql-client imagemagick --no-install-recommends \
+  && apt-get install -y nodejs postgresql-client imagemagick cron --no-install-recommends \
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/*
 
@@ -44,8 +44,12 @@ COPY . $HELPY_HOME/
 RUN chown -R $HELPY_USER $HELPY_HOME
 USER $HELPY_USER
 
+COPY docker/cron.d/* /etc/cron.d/
+RUN chmod 0644 /etc/cron.d/*
+RUN touch /var/log/cron.log
+
 COPY docker/database.yml $HELPY_HOME/config/database.yml
 
 EXPOSE 3000
 
-CMD ["/bin/bash", "/helpy/docker/run.sh"]
+CMD ["cron", "&&", "/bin/bash", "/helpy/docker/run.sh"]
