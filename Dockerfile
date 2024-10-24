@@ -45,7 +45,6 @@ RUN chown -R $HELPY_USER $HELPY_HOME
 
 COPY docker/cron.d/* /etc/cron.d/
 RUN chown root:root /etc/cron.d/*
-RUN chmod +rx /etc/cron.d/*
 RUN touch /var/log/cron.log
 
 USER $HELPY_USER
