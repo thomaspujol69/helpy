@@ -1,1 +1,1 @@
-* * * * * helpyuser cd /helpy && bundle exec rake helpy:mailman
+@reboot /bin/bash -l -c 'RAILS_ENV=production bundle exec rake helpy:mailman mail_interval=60'
