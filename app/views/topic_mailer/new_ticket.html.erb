@@ -13,7 +13,7 @@
   </head>
   <body <%= 'dir=rtl' if %w(ar dv he iw fa nqo ps sd ug ur yi).include?(@topic.locale) %>>
   <p>
-    <%= t('above_this_line', default: "Make sure your reply appears above this line") %><br/>
+    <%= t('above_this_line', default: "Merci d'écrire votre réponse au dessus de cette ligne") %><br/>
     =================================================================<br/>
     <%= t('message_id', default: 'Message ID') %>:<%= @topic.id %></br>
   </p>
