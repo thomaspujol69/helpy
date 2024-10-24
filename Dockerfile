@@ -56,4 +56,4 @@ EXPOSE 3000
 
 USER root
 
-CMD ["cron", "&&", "su", "$HELPY_USER", "/bin/bash", "/helpy/docker/run.sh"]
+CMD cron && su $HELPY_USER /bin/bash /helpy/docker/run.sh
