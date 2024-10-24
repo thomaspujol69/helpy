@@ -42,13 +42,13 @@ VOLUME $HELPY_HOME/public
 USER root
 COPY . $HELPY_HOME/
 RUN chown -R $HELPY_USER $HELPY_HOME
-USER $HELPY_USER
 
 COPY docker/cron.d/* /etc/cron.d/
 RUN chown root:root /etc/cron.d/*
-RUN chmod +x /etc/cron.d/*
-RUN chmod +r /etc/cron.d/*
+RUN chmod +rx /etc/cron.d/*
 RUN touch /var/log/cron.log
+
+USER $HELPY_USER
 
 COPY docker/database.yml $HELPY_HOME/config/database.yml
 
