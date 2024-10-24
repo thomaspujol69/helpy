@@ -10,5 +10,5 @@ New Private Topic
 
 View this online:http://localhost:3000/en/topics/2-test-test/posts
 -----------
-Powered by Helpy
+Envoyé avec Helpy
 Get a Free Helpy Support System for your Site at http://helpy.io/

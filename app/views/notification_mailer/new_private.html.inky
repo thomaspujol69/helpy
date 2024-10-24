@@ -16,11 +16,8 @@
       <spacer size="16"></spacer>
       <center>
         <p>
-          <%= content_tag :small, t('to_reply', default: 'Reply directly to this email or view this online:') %>
+          <%= content_tag :small, t('to_reply', default: 'Reply directly to this email') %>
         </p>
-        <button>
-        <%= link_to "View Online", admin_topic_url(@topic, host: AppSettings['settings.site_url']) %>
-        </button>
       </center>
     </columns>
   </row>

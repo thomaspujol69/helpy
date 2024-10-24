@@ -6,4 +6,4 @@
 
 <%= strip_tags(@topic.posts.last.body) %>
 
-<%= t('to_reply', default: 'Reply directly to this email or view this online:') %> <%= admin_topic_url(@topic, host: AppSettings['settings.site_url']) %>
+<%= t('to_reply', default: 'Reply directly to this email') %>

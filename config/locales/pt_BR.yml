@@ -82,7 +82,7 @@ pt-br:
   # select_locale: "Change your Locale"
 
   # footer
-  powered_by: "Powered by Helpy. Um projeto de Helpdesk Open Source."
+  powered_by: "Envoyé avec Helpy. Um projeto de Helpdesk Open Source."
   get_your_copy: "Garanta uma cópia pelo GitHub"
   version: "Versão:"
 
